@@ -10,6 +10,6 @@ func main() {
 	for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]
 		sep = " "
-    fmt.Println(fmt.Sprintf("%d s", i))
+		fmt.Println(fmt.Sprintf("%d "+os.Args[i], i))
 	}
 }
