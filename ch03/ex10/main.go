@@ -14,19 +14,20 @@ func main() {
 
 func comma(s string) string {
 	var buf bytes.Buffer
+	slice := []byte(s)
 	n := len(s)
 
-	if n < 3 {
+	if n <= 3 {
 		return s
 	}
 
-	var number int
-	for i, v := n s {
+	number := 0
+	for i := 0; i <= n-1; i++ {
 		if number == 3 {
 			buf.WriteString(",")
 			number = 0
 		}
-		fmt.Fprintf(&buf, "%s", v)
+		buf.WriteByte(slice[i])
 		number++
 	}
 
