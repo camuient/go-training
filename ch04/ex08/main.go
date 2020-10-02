@@ -17,7 +17,7 @@ import (
 
 func main() {
 	counts := make(map[rune]int) // counts of Unicode characters
-	var stinglen []int           // count of lengths of UTF-8 encodings
+	var stringlen []int          // count of lengths of UTF-8 encodings
 	var intlen []int
 	invalid := 0 // count of invalid UTF-8 characters
 
@@ -36,7 +36,7 @@ func main() {
 			continue
 		}
 
-		if unicode.Isletter(r) {
+		if unicode.IsLetter(r) {
 			stringlen[n]++
 		}
 
