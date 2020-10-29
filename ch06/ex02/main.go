@@ -77,3 +77,9 @@ func (s *IntSet) Clear() {
 func (s *IntSet) Copy() *IntSet {
 	return &IntSet{append([]uint64(nil), s.words...)}
 }
+
+func (s *IntSet) AddAll(xs ...int) {
+	for _, x := range xs {
+		s.Add(x)
+	}
+}
