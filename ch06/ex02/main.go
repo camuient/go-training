@@ -1,4 +1,4 @@
-package intset
+package main
 
 import (
 	"bytes"
